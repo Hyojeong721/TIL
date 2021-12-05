@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f687e11-2ae6-42a2-86a0-7949f8248d15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/baekjoon/Bronze/1145_적어도대부분의배수/s1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/745.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/751.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/753.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/754.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/756.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/re.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/select.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jungol/LCoder_python/string.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jungol/LCoder_python/re.py" beforeDir="false" afterPath="$PROJECT_DIR$/jungol/LCoder_python/re.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +15,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/string.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="1044">
               <caret line="58" selection-start-line="58" selection-end-line="60" selection-end-column="40" />
             </state>
           </provider>
@@ -34,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="1800">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
@@ -43,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/select.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="1206">
               <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
             </state>
           </provider>
@@ -52,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/re.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="396">
+              <caret line="230" column="10" lean-forward="true" selection-start-line="230" selection-start-column="10" selection-end-line="230" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -83,16 +73,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1046" />
-    <option name="width" value="883" />
-    <option name="height" value="1038" />
+    <option name="x" value="1045" />
+    <option name="width" value="884" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,6 +104,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,14 +252,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="837" y="0" width="706" height="830" extended-state="0" />
+    <frame x="836" y="0" width="707" height="831" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3258595" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.32537314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32998565" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295129" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -295,6 +285,11 @@
           <url>file://$PROJECT_DIR$/baekjoon/Bronze/1110_더하기사이클/s1.py</url>
           <line>5</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jungol/LCoder_python/re.py</url>
+          <line>233</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -375,29 +370,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/string.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="1044">
           <caret line="58" selection-start-line="58" selection-end-line="60" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="1800">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/select.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="1206">
           <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jungol/LCoder_python/re.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        <state relative-caret-position="396">
+          <caret line="230" column="10" lean-forward="true" selection-start-line="230" selection-start-column="10" selection-end-line="230" selection-end-column="10" />
         </state>
       </provider>
     </entry>

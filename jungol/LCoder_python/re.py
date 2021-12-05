@@ -138,14 +138,101 @@
 #     print()
 
 # 859
-a, b = map(int, input().split())
-if a > b:
-    for i in range(1, 10):
-        for j in range(a, b-1, -1):
-            print(j,"*", i, "=", "{:>2}".format(j*i), end='   ')
-        print()
-else:
-    for i in range(1, 10):
-        for j in range(a, b + 1):
-            print(j, "*", i, "=", "{:>2}".format(j * i), end='   ')
-        print()
+# a, b = map(int, input().split())
+# if a > b:
+#     for i in range(1, 10):
+#         for j in range(a, b-1, -1):
+#             print(j,"*", i, "=", "{:>2}".format(j*i), end='   ')
+#         print()
+# else:
+#     for i in range(1, 10):
+#         for j in range(a, b + 1):
+#             print(j, "*", i, "=", "{:>2}".format(j * i), end='   ')
+#         print()
+
+# 869
+# i = 48
+# while i <= 90:
+#     print(i, '-', chr(i))
+#     i += 1
+
+# 870
+# n = int(input())
+# i = n+96
+# # 97 = a / 122 = z
+# # 1 -> +96
+#
+# while 97 <= i <= 122:
+#     print(chr(i), end='')
+#     i += n
+
+# 871
+# n = int(input())
+# for i in range(1, n+1):
+#     print('*'*i)
+#
+# for j in range(n-1, 0, -1):
+#     print('*'*j)
+
+# 872
+# n = int(input())
+# for j in range(n-1, 0, -1):
+#     str = '*'*(j*2+1)
+#     print(str.center((n-1)*2+1))
+#
+# for i in range(n):
+#     str = '*'*(i*2+1)
+#     print(str.center((n-1)*2+1))
+
+# 873
+# n = int(input())
+#
+# for i in range(n):
+#     str = '*'*(i*2+1)
+#     print(str.rjust((n-1)*2+1))
+
+
+# 874
+# n = int(input())
+#
+# for i in range(1, n+1):
+#     ans = ''
+#     for j in range(1, i+1):
+#         if j == i:
+#             ans = ans + str(j)
+#         else:
+#             ans = ans + str(j) + ' '
+#     print(ans.rjust(2*n-1))
+
+# 875
+# n = 3
+# cnt = 65
+# ans = [([0]*n) for _ in range(n)]
+# for i in range(n):
+#     for j in range(n-i):
+#         ans[i][j] = chr(cnt)
+#         cnt += 1
+# num = 0
+# for k in range(n):
+#     for l in range(n):
+#         if type(ans[k][l]) == int:
+#             ans[k][l] = num
+#             num += 1
+#         if l == n-1:
+#             print(ans[k][l])
+#         else:
+#             print(ans[k][l], end=' ')
+
+# 876
+n = 2
+cnt = 1
+
+for i in range(n):# 총 n줄
+    ans=''
+    for j in range(n-i):
+        if j != n-i-1:
+            ans += str(cnt) + ' '
+        else:
+            ans += str(cnt)
+        cnt += 1
+    print(ans.rjust(2*n-1))
