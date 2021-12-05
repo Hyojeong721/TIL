@@ -224,15 +224,39 @@
 #             print(ans[k][l], end=' ')
 
 # 876
-n = 2
-cnt = 1
+# n = 4
+# cnt = 1
+# ent = ''
+# for i in range(n):# 총 n줄
+#     print(ent, end='')
+#     ent += '  '
+#
+#     for j in range(n-i):
+#         if j == n-i-1:
+#             print(cnt, end='')
+#             cnt += 1
+#         else:
+#             print(cnt, end=' ')
+#             cnt += 1
+#     print()
 
-for i in range(n):# 총 n줄
-    ans=''
-    for j in range(n-i):
-        if j != n-i-1:
-            ans += str(cnt) + ' '
+# 877
+# n = 4
+# for i in range(1, n+1):
+#     print('# '*i)
+#
+# for j in range(n-1, 0, -1):
+#     print('  '*(n-j)+'# '*j)
+
+# 878
+n = 3
+cnt = 1
+for i in range(n):
+    for j in range(n):
+        if cnt <= 5:
+            print(cnt*2-1, end=' ')
         else:
-            ans += str(cnt)
+            cnt = 1
+            print(cnt*2-1, end=' ')
         cnt += 1
-    print(ans.rjust(2*n-1))
+    print()
