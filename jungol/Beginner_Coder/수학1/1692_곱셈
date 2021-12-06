@@ -1,0 +1,19 @@
+a = int(input())
+b = int(input())
+
+# (3) = c
+one = b % 10
+c = a * one
+
+#(4) = d
+ten = ((b-one) % 100 )// 10
+d = a * ten
+
+# (5) = e
+mil =(b - (ten*10 + one))//100
+e = a * mil
+
+# (6) = f
+f = a * b
+
+print(c, d, e, f, sep='\n')
