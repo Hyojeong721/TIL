@@ -23,7 +23,6 @@ for tc in range(TC):
             else:
                 categories.append(cat)
                 custumes.append([cus])
-
         result = 0
         for i in range(1, len(categories)+1):
             combi = list(combinations(categories, i)) #[(,),(,)]
