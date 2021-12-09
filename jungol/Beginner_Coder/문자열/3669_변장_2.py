@@ -1,3 +1,4 @@
+# 통과한 코드
 TC = int(input())
 
 for tc in range(TC):
