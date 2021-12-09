@@ -10,13 +10,12 @@ while string != ['END']:
         string.remove
         while char in string:
             string.remove(char)
-    print(ans)
-    keys = list(ans.keys())
-    keys.sort()
-    vals = list(ans.values())
-    vals.sort()
+    ans_list = []
+    for key, val in ans.items():
+        ans_list.append([key, val])
 
-    print(keys)
-    print(vals)
+    ans_list.sort()
+    for res in ans_list:
+        print(res[0], ':', res[1])
 
     string = input().split()
