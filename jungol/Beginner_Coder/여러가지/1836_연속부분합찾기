@@ -1,0 +1,30 @@
+# 타임초과
+# n = int(input())
+# numbers = list(map(int, input().split()))
+# sum_list = []
+#
+# for i in range(n):
+#     temp_sum_list = []
+#     temp = 0
+#     for j in range(i+1, n+1):
+#         temp_sum = sum(numbers[i:j])
+#         temp_sum_list.append(temp_sum)
+#     sum_list.append(max(temp_sum_list))
+#
+# if max(sum_list) < 0:
+#     print(0)
+# else:
+#     print(max(sum_list))
+
+# 성공 코드
+
+n = int(input())
+numbers = list(map(int, input().split()))
+sum_list = []
+temp_sum = 0
+max_num = 0
+for num in numbers:
+    temp_sum = max(num, temp_sum + num)
+    max_num = max(max_num, temp_sum)
+
+print(max_num)
