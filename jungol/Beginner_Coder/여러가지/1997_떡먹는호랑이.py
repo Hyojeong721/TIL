@@ -1,16 +1,20 @@
+def fibo(d, k):
+    for j in range(k-1, 0, -1):
+        cashe = [-1 for _ in range(d + 1)]
+        cashe[d] = k
+        cashe[d-1] = j
+        for i in range(d-2, -1, -1):
+            if cashe[i+2] < 0 or cashe[i+1] < 0:
+                break
+            if cashe[i+2] > cashe[i+1]:
+                cashe[i] = cashe[i+2] - cashe[i+1]
+                if cashe[1] != -1 and cashe[2] > cashe[1]:
+                    return cashe[1], cashe[2]
+
+    return '실패'
+
 d, k = map(int, input().split())
 
-# k = (d-3)*a + (d-1)*b
-for a in range(1, k):
-    if (k - ((d-3)*a)) % (d-1) == 0:
-        b = (k - ((d - 3) * a)) // (d - 1)
-
-        if a <= b < a+b and k == ((d-3)*a) + ((d-1)*b):
-            before = a+b
-            for i in range(4, d+1):
-                if before > ((i-3)*a) + ((i-1)*b):
-                    break
-                else:
-                    if i == d+1:
-                        print(a, b)
-
+a, b = fibo(d, k)
+print(a)
+print(b)
