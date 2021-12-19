@@ -1,6 +1,6 @@
 # Study_Algorithm
 
-### ✔ Algorithm 문제 풀이 기록
+### ✔ 개인 Algorithm 문제 풀이 기록
 
 
 
