@@ -17,4 +17,3 @@ d, k = map(int, input().split())
 a, b = fibo(d, k)
 print(a)
 print(b)
-
