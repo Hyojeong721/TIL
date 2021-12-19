@@ -14,7 +14,6 @@ def fibo(d, k):
     return '실패'
 
 d, k = map(int, input().split())
-
 a, b = fibo(d, k)
 print(a)
 print(b)
