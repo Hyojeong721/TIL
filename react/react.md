@@ -86,3 +86,104 @@ ReactDOM.render(
 )
 ```
 
+
+
+
+
+### State
+
+```js
+import { useState } from 'react';
+
+const [num, setNum] = userState(1);
+
+```
+
+1은 초기값으로 받는 거
+
+배열 -> 첫번째 요소가 바로 state, 두번째 요소가 이 state를 바꾸는 setter함수
+
+
+
+#### 참조형 state
+
+ ```js
+ const [game, setGame] = userState([]);
+ 
+ const handleRollClick = () => {
+     const nextNum = random(6);
+     game.push(nextNum);
+     setGame(game); // 이러면 state가 제대로 변경되지 않는다. 이유는 state는 배열주솟값을 참조하기 때문
+     setGame([...game, nextNum]); //이렇게 새로운 참조형 값을 만들어 변경해야한다. 
+ }
+ ```
+
+
+
+####  state lifting 
+
+자식 컴포넌트의 state를 부모로 올리는 거
+
+
+
+### F2
+
+F2누르고 app -> apple로 변경하면 그 파일에 있는 모든 app 이름이 apple로 변경
+
+
+
+### 스타일 적용하기
+
+index.css 파일을 만들어서
+
+```js
+. body {
+    background-color: black,
+}
+```
+
+ ```js
+ import './index.css';
+ 
+ // head에 스타일로 적용된다. 
+ ```
+
+
+
+
+
+
+
+### 명령어
+
+- 프로젝트 생성하기
+
+  ```
+  npm init react-app .
+  ```
+
+- 개발 모드 실행하기
+
+  ```
+  npm start 
+  npm run start
+  ```
+
+- 실행중인 서버 종료하기
+
+  ctrl + c
+
+- 개발된 프로젝트 빌드하기
+
+  ```
+  npm run build
+  ```
+
+- 빌드한 것 로컬에서 실행하기
+
+  ```
+  npx serve build
+  ```
+
+  
+
