@@ -111,6 +111,14 @@ git log --pretty==oneline // 더 깔끔하게 보임
 git show 커밋아이디(앞에 4자리 정도만 쳐도 나옴)
 ```
 
+#### 두 커밋 사이의 변화 알아보기
+
+```
+git diff <commit key1(앞에 4자리만)> <commit key2>
+```
+
+
+
 <br>
 
 
@@ -156,4 +164,162 @@ git commit --amend
 최신 커밋을 수정해서 다시 새로운 커밋으로 만들기
 
 <br>
+
+### HEAD
+
+어떤 커밋 하나를 가리키고 가리킨 커밋이 working directory 구성됌
+
+보통 가장 최근에 한 커밋을 가리킴 
+
+#### 과거의 커밋을 가리키게 = git reset
+
+```
+git reset --hard <commit id>
+```
+
+그럼 working directory의 내용도 과거 커밋의 모습으로 돌아가게 된다.
+
+<br>
+
+#### 옵션
+
+- --soft : repository는 가리키지만 working directory, staging area 안바뀜
+- --mixed : staging은 바뀌지만 working은 안바뀜
+- --hard :  working, staging 바뀜
+
+
+
+### 기타
+
+- git config aliiias.[별명] [커맨드] : 길이가 긴 커맨드에 별명을 붙여서 이후애 별명으로 해당 커맨드 실행
+- git tag [태그이름] [커밋 아이디] : 특정 커밋에 태그를 붙임
+
+
+
+## 브랜치 branch
+
+하나의 코드 관리 흐름
+
+#### 브랜치 생성
+
+```
+git branch [브랜치이름]
+```
+
+#### 브랜치 이동
+
+```
+git checkout [브랜치이름]
+```
+
+#### 브랜치 조회
+
+```
+git branch
+```
+
+,현재 있는 브랜치에 * 표시
+
+#### 브랜치 삭제
+
+```
+git branch -d [브랜치이름]
+```
+
+#### 브랜치 생성 + 이동
+
+```
+git checkout -b [브랜치이름]
+```
+
+<br>
+
+### branch merge
+
+```
+git merge 합치고싶은브랜치이름
+```
+
+커밋메시지 창 뜨면 :wq
+
+#### conflict
+
+- 머지를 하다가 충돌이 발생했다!
+
+  1. 컨플릭트가 발생한 파일을 연다
+  2. 원하는대로 수정하고
+  3. 커밋한다.
+
+   or
+
+  머지 취소!
+
+  ```
+  git merge --abort
+  ```
+
+   
+
+### git fetch
+
+리모트 레포지토리에 있는 브랜치의 내용을 일단 가져와서 살펴본 후에 머지하고 싶을 때 사용
+
+혹은
+
+리모트 레포지토리에 있는 브랜치의 내용과 내가 작성한 코드를 비교해서 검토해야할 때
+
+git fetch -> git diff
+
+
+
+- git pull은 리모트레포지토리 브랜치내용을 가져와서 머지까지 해주는 것.
+
+ => git pull = git fetch + merge
+
+premium -> origin/premium
+
+리모트내용이 로컬로 들어왔다는 것 로컬은 origin/premium이라고 나타난다.
+
+
+
+- 리모트 레포지토리의 브랜치에 문제가 있을 때 
+  - 잘못된 코드 추가한 개발자에게 코드 수정 요청 후 다시 리모트 레포지토리에 올려달라고 하기
+  - or
+  - 잘못된 부분을 알아서 해결하고 다시 git push하기
+
+<br>
+
+### git blame
+
+이코드는 누가 작성했을까 하는 
+
+``` 
+git blame 파일명
+```
+
+<br>
+
+### git revert
+
+```
+git revert [커밋 아이디]
+```
+
+4번째 커밋상태로 바꾸고 싶을때, (리모트 레포지토리에도 푸쉬를 해버린상태에서)
+
+reset안되고 revert해야한다. 
+
+reset하면 로컬은 5번째에서 4번째로 가지만 리모트는 5번째에 있기때문에
+
+그다음 푸쉬가 안된다.
+
+<br>
+
+#### 여러개 커밋을 수정하고 싶을때
+
+```
+git revert [커밋아이디]..[커밋아이디]
+```
+
+근데 앞에 커밋아이디는 포함안된다.
 
