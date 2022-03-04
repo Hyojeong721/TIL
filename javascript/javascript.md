@@ -308,3 +308,87 @@ element.removeAttribute('속성')
 
 handler부분에는 이름만!! ()넣지마세요~
 
+<br>
+
+## fetch 
+
+### promise = fetch함수가 리턴하는객체 
+
+자바스크립트 비동기 실행에 있어서 아주 핵심적인 문법
+
+##### 작업 상태 정보를 갖는다.
+
+- pending : 작업진행중
+
+- fulfilled : 작업성공 -> promise에 작업성공결과(response)도 갖는다 
+- rejected : 작업실패 -> promise에 작업실패정보도 갖는다.
+
+<br>
+
+##### promise객체가 fulfilled상태일때 사용하는 메소드 => then
+
+- then : fulfilled 상태가 됐을때, 실행될 콜백을 등록하는 메소드
+
+  콜백성공했을때 결과를 받는다. 
+
+  return => promise객체 / 일반객체 모두 가능
+
+**Promise Chaining** = then메소드 연결연파람결연결연결=> 비동기작업처리할때 
+
+<br>
+
+##### promise객체가 rejected 상태일때 실행할 콜백 넣는법
+
+방법 1.
+
+then 메소드에 두번째 파라미터에 넣으면 된다.
+
+.then((response) => response.text(), (error) => {console.log(error); })
+
+방법 2.
+
+.catch((error) => {console.log(error); })
+
+catch메소드는 then 메소드를 약간 변형시킨 것
+
+가장 마지막에 써야 하는게 맞지만, 작업을 살릴 방법이 있다면 중간에 catch 메소드를 써도 된다.
+
+<br>
+
+##### finally 메소드 => promise객체가 뭔상태든지 항상 실행하는 콜백함수 등록
+
+.finally( ()=>{ console.log('exit'); }) ;
+
+보통 catch 뒤에 쓴다.
+
+<br>
+
+### async / await
+
+##### async 
+
+: 비동기 실행이 될 내용이 있다는 뜻 그 부분은 함수 내부에서 await이 붙은 부분 
+
+##### await 
+
+:promise 객체를 리턴하는 코드 앞에 작성!
+
+: 해당 promise객체가 **fullfiled상태**가 될때까지 기다림.
+
+: async함수 안에서만 사용할 수 있다.
+
+##### try-catch문
+
+해당 promise 객체가 rejected상태일 때를 대비할수 있다.
+
+try {
+
+fullfiled일때 } catch (error) {
+
+rejected상태 일때 } finally {
+
+무슨 상태든 무조건 실행 }
+
+
+
+### 
