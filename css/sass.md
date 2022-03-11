@@ -136,3 +136,23 @@ npm install node-sass
          	background: #ffe591;
          }
          ```
+
+
+
+##### 템플릿 적용할때!
+
+**/src/assets 폴더**
+
+**jsconfig.json 파일**
+
+복사 붙여넣기!!!
+
+명령어
+
+npm i react@16.5.0
+
+npm i react-dom@16.5.0
+
+npm i node-sass
+
+npm i reactstrap
