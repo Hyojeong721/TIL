@@ -220,7 +220,7 @@ git branch
 
 ,현재 있는 브랜치에 * 표시
 
-#### 브랜치 삭제
+#### 로컬 브랜치 삭제
 
 ```
 git branch -d [브랜치이름]
@@ -230,6 +230,24 @@ git branch -d [브랜치이름]
 
 ```
 git checkout -b [브랜치이름]
+```
+
+#### 로컬에서 모든 브랜치 확인
+
+```
+git branch -a 
+```
+
+#### 로컬에서 "원격 브랜치 참조" 동기화
+
+```
+git remote update origin --prune
+```
+
+#### 리모트 브랜치 삭제
+
+```
+git push origin --delete feature/TEST-860
 ```
 
 <br>
