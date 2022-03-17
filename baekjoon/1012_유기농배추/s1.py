@@ -37,7 +37,7 @@ for tc in range(T):
     for i in range(K):
         x, y = map(int, input().split())
         graph[x][y] = 1
-
+    print(graph)
     for m in range(M):
         for n in range(N):
             if graph[m][n] == 1:
