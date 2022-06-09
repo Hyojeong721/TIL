@@ -1,0 +1,26 @@
+import sys
+sys.stdin = open('input.txt')
+number=int(input())
+print(number)
+result = '홀수' if number%2 else '짝수'
+print(result)
+
+numbers=map(int,input().split())
+total=0
+
+for number in numbers:
+    total+=number
+
+print(total)
+
+N = int(input())
+
+
+matrix=[]
+
+for i in range(N):
+    temp = list(map(int,input().split()))
+    matrix.append(temp)
+
+for row in matrix:
+    print(row)

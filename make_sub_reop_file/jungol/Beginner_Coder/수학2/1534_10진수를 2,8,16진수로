@@ -1,0 +1,32 @@
+# n, b = map(int, input().split())
+n, b = 27, 2
+if b == 2:
+    arr=[]
+    while n != 1:
+        remainder = n % 2
+        arr.append(remainder)
+        n = n // 2
+
+elif b == 8:
+    arr = []
+    while n > 8:
+        remainder = n % 8
+        arr.append(remainder)
+        n = n // 8
+
+elif b == 16:
+    arr = []
+    while n > 16:
+        remainder = n % 16
+        if remainder > 9:
+            jin = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+            arr.append(jin[remainder - 10])
+        else:
+            arr.append(remainder)
+        n = n//16
+
+arr.append(n)
+arr.reverse()
+for i in arr:
+    print(i, end='')
+

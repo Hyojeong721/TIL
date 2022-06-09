@@ -1,0 +1,16 @@
+8
+New window
+New file
+Copy
+Undo
+Format uxed
+Font
+Cut
+Paste
+
+5
+New
+Open
+Save
+Save As
+Save All
