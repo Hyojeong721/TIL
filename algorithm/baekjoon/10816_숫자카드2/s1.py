@@ -9,7 +9,7 @@ res = {}
 
 
 def binary(s, e, num, cnt):
-    if s >= e:
+    if s > e:
         return 0
     m = (s + e) // 2
     if mine[m] == num:
