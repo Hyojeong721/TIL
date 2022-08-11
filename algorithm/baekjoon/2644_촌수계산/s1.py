@@ -24,7 +24,6 @@ def bfs(node):
                 visited[n] = visited[now]+1
                 que.append(n)
 
-
 bfs(a)
 if visited[b] != 0:
     print(visited[b])
