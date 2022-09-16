@@ -1,9 +1,9 @@
 import sys
-# sys.stdin = open('input.txt')
+from collections import deque
 
 N = int(sys.stdin.readline())
 # N = int(input())
-arr = []
+arr = deque()
 for _ in range(N):
     con = list(sys.stdin.readline().split())
     # print(con)
@@ -14,7 +14,7 @@ for _ in range(N):
         arr.append(con[-1])
     elif con[0] == 'pop':
         if arr:
-            print(arr.pop(0))
+            print(arr.popleft())
         else:
             print(-1)
     elif con[0] == 'size':
