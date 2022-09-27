@@ -18,10 +18,10 @@ def dfs(i, j):
                 dfs(ni, nj)
 
 while True:
-
     w, h = map(int, input().split())
-    if w==0 and h==0:
+    if w == 0 and h == 0:
         break
+
     arr = list(list(map(int, input().split())) for _ in range(h))
     visited = [[False]*w for _ in range(h)]
 
@@ -33,5 +33,4 @@ while True:
                 visited[i][j] = True
                 dfs(i, j)
                 res += 1
-
     print(res)
