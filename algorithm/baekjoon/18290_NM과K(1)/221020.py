@@ -3,36 +3,33 @@
 # 단, 선택한 두 칸이 인접하면 안된다.
 N, M, K = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(N)]
-res = 0
 visited = [[False]*M for _ in range(N)]
 di, dj = [-1, 1, 0, 0], [0, 0, -1, 1]
+res = -10000
 
-def dfs(now, choice, temp, inject):
-    global visited, res
-    print(now, choice, temp, inject, res)
-
-    if len(choice) == K:
-        res = max(temp, res)
+def dfs(cnt, x, y, temp):
+    global res, visited
+    if cnt == K:
+        res = max(res, temp)
         return
 
-    for k in range(4):
-        ni, nj = now[0] + di[k], now[1] + dj[k]
-        if 0 <= ni < N and 0 <= nj < M and not visited[ni][nj]:
-            visited[ni][nj] = True
-            inject.append((ni, nj))
+    for i in range(x, N):
+        for j in range(y if i == x else 0, M):
+            if visited[i][j]:
+                continue
+            ok = True
 
-    for i in range(now[0], N):
-        for j in range(M):
-            if (i, j) not in choice and not visited[i][j]:
+            for k in range(4):
+                ni, nj = i+di[k], j+dj[k]
+                if 0 <= ni < N and 0 <= nj < M:
+                    if visited[ni][nj]:
+                        ok = False
+
+            if ok:
                 visited[i][j] = True
-                choice.append((i, j))
-                dfs((i, j), choice, temp+arr[i][j], inject)
-                choice.pop()
+                # print(cnt+1, i, j, temp+arr[i][j])
+                dfs(cnt+1, i, j, temp+arr[i][j])
+                visited[i][j] = False
 
-                for inj in inject:
-                    x, y = inj[0], inj[1]
-                    visited[x][y] = False
-                inject.clear()
-
-dfs((0, 0), [(0, 0)], arr[0][0], [])
+dfs(0, 0, 0, 0)
 print(res)
