@@ -1,45 +1,38 @@
 import sys
 from collections import deque
+
 input = sys.stdin.readline
 
-n, m = map(int, input().split())
-graph = []
+di, dj = [-1, 1, 0, 0], [0, 0, -1, 1]
+R, C = map(int, input().split())
+arr = [list(input()) for _ in range(R)]
+visited = [[0]*C for _ in range(R)]
+res = 'IMPOSSIBLE'
 
-for i in range(n):
-    graph.append(list(input().rstrip()))
-    if 'J' in graph[i]:
-        q = deque([(0, i, graph[i].index('J'))])
+for i in range(R):
+    if 'J' in arr[i] or 'F' in arr[i]:
+        for j in range(C):
+            if arr[i][j] == 'J':
+                x, y = i, j
+                visited[i][j] = 1
+            if arr[i][j] == 'F':
+                fx, fy = i, j
+                visited[i][j] = 0
 
-for i in range(n):
-    for j in range(m):
-        if graph[i][j] == 'F':
-            q.append((-1, i, j))
+def isrange(i, j):
+    if 0<=i<R and 0<=j<C:
+        return True
+    return False
 
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
-ans = 'IMPOSSIBLE'
+def fire(i, j):
+    global arr
+    for k in range(4):
+        ni, nj = i+di[k], j+dj[k]
+        if isrange(ni, nj) and  arr[ni][nj] != '#':
+            arr[ni][nj] = 'F'
 
-while q:
-    time, x, y = q.popleft()
 
-    # 지훈이 탈출
-    if time > -1 and graph[x][y] != 'F' and (x == 0 or y == 0 or x == n - 1 or y == m - 1):
-        ans = time + 1
-        break
+def dfs(i, j):
+    return
 
-    for i in range(4):
-        nx = x + dx[i]
-        ny = y + dy[i]
-        if 0 <= nx < n and 0 <= ny < m and graph[nx][ny] != '#':
-
-            # 지훈이 이동
-            if time > -1 and graph[nx][ny] == '.':
-                graph[nx][ny] = '_'
-                q.append((time + 1, nx, ny))
-
-            # 불 퍼뜨리기
-            elif time == -1 and graph[nx][ny] != 'F':
-                graph[nx][ny] = 'F'
-                q.append((-1, nx, ny))
-
-print(ans)
+print(res)
