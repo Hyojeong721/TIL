@@ -16,23 +16,34 @@ arr = [list(map(int, input().split())) for _ in range(N)]
 S, X, Y = map(int, input().split())
 di, dj = [-1, 1, 0, 0], [0, 0, -1, 1]
 que = deque()
+temp = []
 
+
+# 처음 virus 입력
 for i in range(N):
     for j in range(N):
         if arr[i][j] != 0:
-            que.append((0, arr[i][j], i, j))
+            temp.append((arr[i][j], 0, i, j))
+
+temp.sort()
+
+for k in temp:
+    que.append(k)
 
 
 while que:
-    time, virus, i, j = que.popleft()
-    if time == S:
+    virus, time, p, q = que.popleft()
+    if time == S or arr[X-1][Y-1] != 0:
         break
 
     for k in range(4):
-        ni, nj = i+di[k], j+dj[k]
+        ni, nj = p+di[k], q+dj[k]
         if is_range(ni, nj) and arr[ni][nj] == 0:
             arr[ni][nj] = virus
-            que.append((time+1, virus, ni, nj))
+            que.append((virus, time+1, ni, nj))
+
 
 print(arr[X-1][Y-1])
+
+
 
