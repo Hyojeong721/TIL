@@ -24,5 +24,3 @@ while q:
         check[now-1] = True
         dist[now-1] = dist[now] + 1
 print(dist[k])
-[ 풀이 방법 ]
-숨바꼭질 문제에
